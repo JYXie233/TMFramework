@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import <MagicalRecord/MagicalRecord+Setup.h>
+#import <SVProgressHUD.h>
+#import "Macro.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initCoreData];
+    [self initSVProgressHUD];
     return YES;
+}
+
+-(void)initSVProgressHUD{
+    [SVProgressHUD setBackgroundColor:RGBA(0, 0, 0, 0.5)];
+    [SVProgressHUD setForegroundColor:RGBA(255, 255, 255, 1)];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+}
+
+-(void)initCoreData{
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"TmFramework"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
