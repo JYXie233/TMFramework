@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
-typedef void(^NetworkCompleteBlock)(NSDictionary* response, NSError* error);
+typedef void(^NetworkCompleteBlock)(id response, NSError* error);
 
 typedef void(^NetworkFormDataHandler)(id <AFMultipartFormData> formData);
 

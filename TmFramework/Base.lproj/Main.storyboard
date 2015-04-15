@@ -83,6 +83,23 @@
                                             <segue destination="75H-Nu-d4P" kind="show" id="Asf-Yx-dYP"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="U0u-bq-yiJ" style="IBUITableViewCellStyleDefault" id="hI9-EF-6c3">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hI9-EF-6c3" id="57U-ro-E8L">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="JSONModel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U0u-bq-yiJ">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NEv-dy-9Nk" kind="show" id="4PT-Vi-HKe"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -229,6 +246,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0y-Rv-iox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24" y="1689"/>
+        </scene>
+        <!--Model View Controller-->
+        <scene sceneID="8Wn-VE-SQa">
+            <objects>
+                <viewController id="NEv-dy-9Nk" customClass="JSONModelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nsT-QD-Zfo"/>
+                        <viewControllerLayoutGuide type="bottom" id="CrQ-LI-UQa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CKZ-U9-0q0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJv-Uf-uj1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YJv-Uf-uj1" secondAttribute="trailing" id="1kT-GT-orv"/>
+                            <constraint firstItem="YJv-Uf-uj1" firstAttribute="top" secondItem="nsT-QD-Zfo" secondAttribute="bottom" id="Qnq-du-SU9"/>
+                            <constraint firstItem="YJv-Uf-uj1" firstAttribute="leading" secondItem="CKZ-U9-0q0" secondAttribute="leading" id="p8j-69-bwT"/>
+                            <constraint firstItem="CrQ-LI-UQa" firstAttribute="top" secondItem="YJv-Uf-uj1" secondAttribute="bottom" id="rfW-kc-Hdk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="YJv-Uf-uj1" id="O9p-Fl-Qzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zo4-xa-VFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="2414"/>
         </scene>
     </scenes>
 </document>

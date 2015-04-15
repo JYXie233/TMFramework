@@ -32,8 +32,9 @@
 		E29E2EFB1ADBECA8007A8B57 /* PathAnimationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2EFA1ADBECA8007A8B57 /* PathAnimationDemo.m */; };
 		E29E2F001ADC1207007A8B57 /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2EFF1ADC1207007A8B57 /* IndexTableViewController.m */; };
 		E29E2F041ADC1379007A8B57 /* BezierPathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2F031ADC1379007A8B57 /* BezierPathAnimationViewController.m */; };
-		E29E2F071ADC17D5007A8B57 /* TextAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2F061ADC17D5007A8B57 /* TextAnimationView.m */; };
 		E29E2F0A1ADC1926007A8B57 /* TextPathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2F091ADC1926007A8B57 /* TextPathAnimationViewController.m */; };
+		E29E2F0E1ADEAE69007A8B57 /* TextAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2F0D1ADEAE69007A8B57 /* TextAnimationView.m */; };
+		E29E2F121ADEB167007A8B57 /* JSONModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E2F111ADEB167007A8B57 /* JSONModelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +100,12 @@
 		E29E2EFF1ADC1207007A8B57 /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewController.m; sourceTree = "<group>"; };
 		E29E2F021ADC1379007A8B57 /* BezierPathAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathAnimationViewController.h; sourceTree = "<group>"; };
 		E29E2F031ADC1379007A8B57 /* BezierPathAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathAnimationViewController.m; sourceTree = "<group>"; };
-		E29E2F051ADC17D5007A8B57 /* TextAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextAnimationView.h; sourceTree = "<group>"; };
-		E29E2F061ADC17D5007A8B57 /* TextAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextAnimationView.m; sourceTree = "<group>"; };
 		E29E2F081ADC1926007A8B57 /* TextPathAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextPathAnimationViewController.h; sourceTree = "<group>"; };
 		E29E2F091ADC1926007A8B57 /* TextPathAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextPathAnimationViewController.m; sourceTree = "<group>"; };
+		E29E2F0C1ADEAE69007A8B57 /* TextAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextAnimationView.h; sourceTree = "<group>"; };
+		E29E2F0D1ADEAE69007A8B57 /* TextAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextAnimationView.m; sourceTree = "<group>"; };
+		E29E2F101ADEB167007A8B57 /* JSONModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelViewController.h; sourceTree = "<group>"; };
+		E29E2F111ADEB167007A8B57 /* JSONModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,9 +319,8 @@
 		E29E2EAA1ADAD67B007A8B57 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				E29E2F0B1ADEAE69007A8B57 /* TextAnimationView */,
 				E29E2EAB1ADAD68C007A8B57 /* EmptyView */,
-				E29E2F051ADC17D5007A8B57 /* TextAnimationView.h */,
-				E29E2F061ADC17D5007A8B57 /* TextAnimationView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -336,6 +338,7 @@
 		E29E2EFC1ADC11F1007A8B57 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E29E2F0F1ADEB15B007A8B57 /* JSONModel */,
 				E29E2F011ADC133E007A8B57 /* PathAnimation */,
 				E29E2EFD1ADC11F1007A8B57 /* Index */,
 			);
@@ -360,6 +363,24 @@
 				E29E2F091ADC1926007A8B57 /* TextPathAnimationViewController.m */,
 			);
 			path = PathAnimation;
+			sourceTree = "<group>";
+		};
+		E29E2F0B1ADEAE69007A8B57 /* TextAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				E29E2F0C1ADEAE69007A8B57 /* TextAnimationView.h */,
+				E29E2F0D1ADEAE69007A8B57 /* TextAnimationView.m */,
+			);
+			path = TextAnimationView;
+			sourceTree = "<group>";
+		};
+		E29E2F0F1ADEB15B007A8B57 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				E29E2F101ADEB167007A8B57 /* JSONModelViewController.h */,
+				E29E2F111ADEB167007A8B57 /* JSONModelViewController.m */,
+			);
+			path = JSONModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,10 +522,12 @@
 				E29E2F001ADC1207007A8B57 /* IndexTableViewController.m in Sources */,
 				E29E2E501ADA474E007A8B57 /* ViewController.m in Sources */,
 				E29E2EEF1ADBDB6D007A8B57 /* NSObject+Swizzle.m in Sources */,
+				E29E2F0E1ADEAE69007A8B57 /* TextAnimationView.m in Sources */,
 				E29E2E811ADA4B85007A8B57 /* GVUserDefaults+Properties.m in Sources */,
 				E29E2E4D1ADA474E007A8B57 /* AppDelegate.m in Sources */,
 				E29E2F041ADC1379007A8B57 /* BezierPathAnimationViewController.m in Sources */,
 				E29E2EF81ADBE8CD007A8B57 /* NSDate+Category.m in Sources */,
+				E29E2F121ADEB167007A8B57 /* JSONModelViewController.m in Sources */,
 				E29E2E9D1ADA7B6F007A8B57 /* APPUtils.m in Sources */,
 				E29E2E851ADA5D1E007A8B57 /* TestModel.m in Sources */,
 				E29E2E8C1ADA6D0C007A8B57 /* TestEntity.m in Sources */,
@@ -513,7 +536,6 @@
 				E29E2EF51ADBE7C1007A8B57 /* NSMutableDictionary+Safe.m in Sources */,
 				E29E2F0A1ADC1926007A8B57 /* TextPathAnimationViewController.m in Sources */,
 				E29E2EAE1ADAD69F007A8B57 /* EmptyView.m in Sources */,
-				E29E2F071ADC17D5007A8B57 /* TextAnimationView.m in Sources */,
 				E29E2E7D1ADA4B60007A8B57 /* GVUserDefaults.m in Sources */,
 				E29E2EF21ADBE01B007A8B57 /* NSDictionary+Safe.m in Sources */,
 				E29E2E971ADA7619007A8B57 /* Network.m in Sources */,

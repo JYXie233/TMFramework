@@ -34,11 +34,20 @@
 }
 
 +(void)GET:(NSString *)api withParams:(NSDictionary *)params withHandler:(NetworkCompleteBlock)block isShowHub:(BOOL)isShowHub{
+    if (isShowHub) {
+        [APPUtils showProgress];
+    }
     [[self sharedManager].httpManager GET:api parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         [[self sharedManager] disposeResponse:responseObject withBlock:block withApi:api isShowHub:isShowHub];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         block(nil, error);
-        [APPUtils showError:error.localizedDescription];
+        if (isShowHub) {
+            [APPUtils showError:error.localizedDescription];
+        }
+        
+#if DEBUG
+        NSLog(@"\n\t接口地址：%@%@\n\t错误信息：%@", kServiceHost, api, error.localizedDescription);
+#endif
     }];
 }
 
@@ -58,7 +67,13 @@
         [[self sharedManager] disposeResponse:responseObject withBlock:block withApi:api isShowHub:isShowHub];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         block(nil, error);
-        [APPUtils showError:error.localizedDescription];
+        if (isShowHub) {
+            [APPUtils showError:error.localizedDescription];            
+        }
+
+#if DEBUG
+        NSLog(@"\n\t接口地址：%@%@\n\t错误信息：%@", kServiceHost, api, error.localizedDescription);
+#endif
     }];
 }
 
@@ -67,7 +82,9 @@
         [APPUtils showSuccess:[response description]];
     }
     block(response, nil);
-    
+#if DEBUG
+    NSLog(@"\n\t接口地址：%@%@\n\t收到数据：%@", kServiceHost, api, response);
+#endif
 }
 
 @end

@@ -9,6 +9,6 @@
 #ifndef TmFramework_NetworkConfig_h
 #define TmFramework_NetworkConfig_h
 
-#define kServiceHost @"http://192.168.1.101:8888/"
+#define kServiceHost @"http://192.168.1.104:8888/"
 
 #endif

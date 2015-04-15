@@ -56,7 +56,7 @@
 
 -(CGPathRef)pathRefFromText{
 
-    UIFont * font = [UIFont systemFontOfSize:30];
+    UIFont * font = [UIFont systemFontOfSize:40];
     UIColor *foregroundColor = [UIColor whiteColor];
     NSDictionary *attrsDic = @{NSForegroundColorAttributeName: foregroundColor,
                                NSFontAttributeName: font
