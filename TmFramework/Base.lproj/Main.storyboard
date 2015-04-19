@@ -100,6 +100,23 @@
                                             <segue destination="NEv-dy-9Nk" kind="show" id="4PT-Vi-HKe"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="rSe-x9-x21" style="IBUITableViewCellStyleDefault" id="OUc-c4-Rv6">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OUc-c4-Rv6" id="Ngo-1l-vYY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ClockView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rSe-x9-x21">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hNH-2n-SHB" kind="show" id="Es4-2z-cTU"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -281,6 +298,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo4-xa-VFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="22" y="2414"/>
+        </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="OXJ-oT-hhE">
+            <objects>
+                <viewController id="hNH-2n-SHB" customClass="ClockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vJH-SR-sLs"/>
+                        <viewControllerLayoutGuide type="bottom" id="70p-dp-IRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5sf-ig-aOU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R11-7j-GtT" customClass="TMClockView">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ogw-vD-wJl"/>
+                                    <constraint firstAttribute="height" constant="200" id="uBh-nY-E3J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="R11-7j-GtT" secondAttribute="centerX" id="WaP-A6-8Yd"/>
+                            <constraint firstAttribute="centerY" secondItem="R11-7j-GtT" secondAttribute="centerY" id="wSv-0K-Yxa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kG-PO-W8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="3097"/>
         </scene>
     </scenes>
 </document>

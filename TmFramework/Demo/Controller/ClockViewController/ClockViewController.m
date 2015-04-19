@@ -1,29 +1,22 @@
 //
-//  JSONModelViewController.m
+//  ClockViewController.m
 //  TmFramework
 //
-//  Created by Tom on 15/4/15.
+//  Created by Tom on 15/4/18.
 //  Copyright (c) 2015年 Tom. All rights reserved.
 //
 
-#import "JSONModelViewController.h"
-#import "Network.h"
-#import "JsonList.h"
-@interface JSONModelViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *label;
+#import "ClockViewController.h"
+
+@interface ClockViewController ()
 
 @end
 
-@implementation JSONModelViewController
+@implementation ClockViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [Network GET:@"jsonlist" withParams:nil withHandler:^(id response, NSError *error) {
-        _label.text = [NSString stringWithFormat:@"%@", response];
-        JsonList * json = [[JsonList alloc] initWithDictionary:response error:nil];
-        _label.text = [NSString stringWithFormat:@"%@%@", response, json.description];
-    } isShowHub:NO];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,11 @@
 
 #import "JSONModel.h"
 
+
+@protocol TestModel
+
+@end
+
 @interface TestModel : JSONModel
 @property (assign, nonatomic) int id;
 @property (strong, nonatomic) NSString* country;
