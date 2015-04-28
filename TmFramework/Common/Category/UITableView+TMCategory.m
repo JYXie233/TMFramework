@@ -17,7 +17,6 @@ static const void *emptyViewkey = &emptyViewkey;
 
 +(void)load{
     [self swizzleSelector:@selector(reloadData) withSelector:@selector(beginReloadData)];
-    //    [self swizzleSelector:@selector(initWithFrame:) withSelector:@selector(initWithFrame_debug:)];
 }
 
 -(void)beginReloadData{
@@ -34,7 +33,7 @@ static const void *emptyViewkey = &emptyViewkey;
         if (isEmpty) {
             [self addSubview:[self emptyView]];
             [self layoutIfNeeded];
-            EmptyView * em = [self emptyView];
+            EmptyView * em = (EmptyView*)[self emptyView];
             [em.pathView startAnimation];
         }else{
             [[self emptyView] removeFromSuperview];
@@ -52,7 +51,7 @@ static const void *emptyViewkey = &emptyViewkey;
         [view.reloadBtn addTarget:self action:@selector(reloadBtnAction:) forControlEvents:UIControlEventTouchUpInside];
         objc_setAssociatedObject(self, emptyViewkey, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return objc_getAssociatedObject(self, emptyViewkey);
+    return view;
 }
 
 - (void)setEmptyView:(UIView *)emptyView{
